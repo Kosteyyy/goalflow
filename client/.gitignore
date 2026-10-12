@@ -1,0 +1,23 @@
+# Angular
+.angular/
+dist/
+out-tsc/
+browser/
+server/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Env / IDE
+.env
+.env.local
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db

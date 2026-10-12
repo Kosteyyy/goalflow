@@ -40,16 +40,18 @@ import { ToastComponent } from './shared/toast.component';
     @if (state.commandPaletteOpen()) { <app-command-palette></app-command-palette> }
     @if (state.filtersOpen()) { <app-filters-popover></app-filters-popover> }
 
-    @if (state.editingTaskId(); as id) {
-      <app-task-card [taskId]="id"></app-task-card>
+    @if (state.editingTaskId(); as taskId) {
+      <app-task-card [taskId]="taskId"></app-task-card>
     }
 
-    @if (state.editingGoalId(); as id) {
-      <app-entity-form kind="goal" [entityId]="id || null"></app-entity-form>
+    @if (state.editingGoalId() !== null) {
+      <app-entity-form kind="goal"
+                       [entityId]="state.editingGoalId() || null"></app-entity-form>
     }
 
-    @if (state.editingProjectId(); as id) {
-      <app-entity-form kind="project" [entityId]="id || null"></app-entity-form>
+    @if (state.editingProjectId() !== null) {
+      <app-entity-form kind="project"
+                       [entityId]="state.editingProjectId() || null"></app-entity-form>
     }
 
     <app-toast></app-toast>

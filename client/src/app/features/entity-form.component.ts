@@ -11,7 +11,7 @@ import { StateService } from '../core/state.service';
     <div class="backdrop" (click)="close()"></div>
     <div class="modal" (click)="$event.stopPropagation()">
       <header class="head">
-        <span>{{ isNew() ? ('Новая ' + kindLabel) : 'Редактирование' }}</span>
+        <span>{{ isNew() ? ('Новая ' + kindLabel()) : 'Редактирование' }}</span>
         <button class="close" (click)="close()">✕</button>
       </header>
 
